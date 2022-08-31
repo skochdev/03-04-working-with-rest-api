@@ -80,16 +80,13 @@ class App extends Component {
         <GlobalStyle />
         <Box as="main" bg="white">
           <MaterialEditor onSubmit={addMaterial} />
+          {status === 'pending' && <p>Loading....</p>}
+          <MaterialList
+            materials={materials}
+            onRemoveMaterial={removeMaterial}
+            onUpdateMaterial={updateMaterial}
+          />
 
-          {status === 'pending' ? (
-            'Loading...'
-          ) : (
-            <MaterialList
-              materials={materials}
-              onRemoveMaterial={removeMaterial}
-              onUpdateMaterial={updateMaterial}
-            />
-          )}
           {status === 'error' && <p>{error.errorMessage}</p>}
         </Box>
       </>

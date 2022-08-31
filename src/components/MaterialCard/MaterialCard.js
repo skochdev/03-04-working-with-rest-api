@@ -1,5 +1,6 @@
 import { EditMaterialModal } from '../EditMaterialModal/EditMaterialModal';
 import { Component } from 'react';
+import * as S from './MaterialCard.styled';
 
 // update field comes from the modal. id is taken from e.target.id that is passed back from the modal,
 // so I don't need to store it in state.
@@ -30,6 +31,7 @@ export class MaterialCard extends Component {
     };
     this.props.onUpdateMaterial(update);
     this.resetInputField();
+    this.toggleModal();
   };
 
   // Utility helpers ->
@@ -37,23 +39,25 @@ export class MaterialCard extends Component {
     this.setState({ update: '' });
   };
 
+  // Utility helpers <-/
+
   render() {
     const { toggleModal, handleUpdateMaterial, handleSubmitUpdate } = this;
     const { isModalActive, update } = this.state;
     const { id, title, link, onRemoveMaterial } = this.props;
 
     return (
-      <div>
-        <p>Title: {title}</p>
-        <p>
+      <S.MaterialCard>
+        <S.Title>Title: {title}</S.Title>
+        <S.Link>
           Link: <a href={link}>Link</a>
-        </p>
-        <button type="button" onClick={() => onRemoveMaterial(id)}>
+        </S.Link>
+        <S.Button type="button" onClick={() => onRemoveMaterial(id)}>
           Remove material
-        </button>
-        <button type="button" onClick={toggleModal}>
+        </S.Button>
+        <S.Button type="button" onClick={toggleModal}>
           Update material
-        </button>
+        </S.Button>
         {isModalActive && (
           <EditMaterialModal
             onChangeMaterial={handleUpdateMaterial}
@@ -63,7 +67,7 @@ export class MaterialCard extends Component {
             id={id}
           />
         )}
-      </div>
+      </S.MaterialCard>
     );
   }
 }

@@ -1,10 +1,12 @@
 import { MaterialCard } from '../MaterialCard/MaterialCard';
+import * as S from './MaterialCard.styled';
+import { Box } from '../Box';
 
 export const MaterialList = ({ materials, ...methods }) => {
   return (
-    <ul>
+    <Box as="ul" mt={4}>
       {materials.map(({ id, title, link }) => (
-        <li key={id}>
+        <S.MaterialItem key={id}>
           <MaterialCard
             id={id}
             title={title}
@@ -12,8 +14,8 @@ export const MaterialList = ({ materials, ...methods }) => {
             key={id}
             {...methods}
           />
-        </li>
+        </S.MaterialItem>
       ))}
-    </ul>
+    </Box>
   );
 };
