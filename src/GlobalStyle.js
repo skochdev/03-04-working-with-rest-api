@@ -1,9 +1,7 @@
-import { createGlobalStyle } from 'styled-components/macro';
 import 'modern-normalize';
+import { createGlobalStyle } from 'styled-components/macro';
 
-// In this component we store the global css rules and modern-normalize.
-// Resets and other stuff that might be used globally - put it all here.
-
+// Resets and other css-related stuff that might be used globally - put it all here.
 export const GlobalStyle = createGlobalStyle`
 
   body {
