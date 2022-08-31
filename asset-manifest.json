@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/03-04-working-with-rest-api/static/css/main.17654e45.css",
-    "main.js": "/03-04-working-with-rest-api/static/js/main.9ee87e7d.js",
+    "main.js": "/03-04-working-with-rest-api/static/js/main.b55a4205.js",
     "index.html": "/03-04-working-with-rest-api/index.html",
     "main.17654e45.css.map": "/03-04-working-with-rest-api/static/css/main.17654e45.css.map",
-    "main.9ee87e7d.js.map": "/03-04-working-with-rest-api/static/js/main.9ee87e7d.js.map"
+    "main.b55a4205.js.map": "/03-04-working-with-rest-api/static/js/main.b55a4205.js.map"
   },
   "entrypoints": [
     "static/css/main.17654e45.css",
-    "static/js/main.9ee87e7d.js"
+    "static/js/main.b55a4205.js"
   ]
 }
