@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cra-template-skochdev/static/css/main.17654e45.css",
+    "main.js": "/cra-template-skochdev/static/js/main.b6f0f885.js",
+    "index.html": "/cra-template-skochdev/index.html",
+    "main.17654e45.css.map": "/cra-template-skochdev/static/css/main.17654e45.css.map",
+    "main.b6f0f885.js.map": "/cra-template-skochdev/static/js/main.b6f0f885.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.17654e45.css",
+    "static/js/main.b6f0f885.js"
+  ]
+}
